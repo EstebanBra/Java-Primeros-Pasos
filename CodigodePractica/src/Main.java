@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         // Declarar Variables
         int edad = 20;
-        float clima = 19.5f;
+        float clima = 19.5F;
         char letra = 'a';
         String nombre = "Esteban Bravo";
 
@@ -47,7 +47,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ingrese un usuario:");
-        var usuarioIngresado = scanner.nextLine();
+        var usuarioIngresado = scanner.next();
         System.out.println("\nIngrese su edad");
         int numIngresado = scanner.nextInt();
 
@@ -69,6 +69,19 @@ public class Main {
         // Operaciones matematicas
         double x = 2.1;
         double y = 3;
+
+        // Operador ternario, es como un if else 
+
+        var resultado = (2 > 1) ? "verdadero" : "Falso";
+        System.out.println("\nresultado =" + resultado);
+
+        // Ejemplo comprobar si el numero ingresado es par o impar
+        System.out.println("Ingrese un numero para comporbar si es par o impar: ");
+        int parImpar = scanner.nextInt();
+
+        var respuesta = (parImpar%2 == 0) ? "Numero Ingresado es Par" : "Numero Ingresado es Impar";
+        System.out.println(respuesta);
+        
 
         // Devuelve un entero hacia arriba
         System.out.println(Math.ceil(x));
@@ -100,7 +113,41 @@ public class Main {
                 break;
         }
 
+        // Secuencia de control if else
+        
+        int edadIngresasa = 20;
 
+        if (edadIngresasa > 18) {
+            System.out.println("\nUsted es mayor de edad");
+        }else {
+            System.out.println("\nUsted es menor de edad");
+        }
+
+        // Ciclo while
+
+        var contador = 0;
+
+
+        while (contador < 4){
+            System.out.println(contador + " - "); // muestra 0 - 1 - 2 - 3
+            contador++;
+        }
+        contador = 0;
+
+        // Ciclo do-while
+
+        do {
+            System.out.println(contador + " - "); // muestra 0 - 1 - 2 - 3 
+            contador++;
+        } while (contador < 4);
+
+
+        // Ciclo for
+        contador = 4;
+        for(int i = 0; i < contador; i++){
+            System.out.println(i + " - "); // muestra 0 - 1 - 2 - 3
+        }
+        
         scanner.close();
     }
 }
